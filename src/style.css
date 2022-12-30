@@ -9,38 +9,40 @@ html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.content{
+.content {
     border: 5px solid salmon;
     background-color: antiquewhite;
     font-size: 3rem;
     color: rgb(26, 23, 18);
-    display:grid;
+    display: grid;
     grid-template-columns: 20vw 20vw 20vw;
     grid-template-rows: 20vh 20vh 20vh;
+    grid-template-areas:
+        'header header header'
+        'side main main'
+        'side main main';
     place-content: center;
 }
 
-.item{
-   font-size:4rem;
-   /* background-color: blue; */
+.item {
+    font-size: 4rem;
+    /* background-color: blue; */
 }
 
-.item-1{
+.item-1 {
     background-color: rgb(139, 148, 228);
     border: 5px solid rgb(48, 45, 112);
-    grid-column-start: 1;
-    grid-column-end: 4;
+    grid-area: header;
 }
 
-.item-2{
+.item-2 {
     background-color: rgb(228, 139, 176);
     border: 5px solid rgb(4, 61, 115);
-    grid-row: 2/4;
+    grid-area: side;
 }
 
-.item-3{
+.item-3 {
     background-color: rgb(173, 178, 165);
     border: 5px solid rgb(205, 184, 23);
-    grid-area: 2/2/4/4
-    /* fila en la que comienza, columna donde comienza, fila donde termina, columna donde termina */
+    grid-area: main;
 }
